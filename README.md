@@ -1,66 +1,63 @@
-# Dataset and code: decision-focused chassis world models
+# Physics-Structured Chassis World Models
 
-Public dataset and companion-code repository for **Physics-Structured Chassis World Models with Decision-Focused Tire-Force Learning**.
+Dataset and code for **Physics-Structured Chassis World Models with Decision-Focused Tire-Force Learning**, by Dastan Kaldybayev, Yanzhao Su, Jin Huang and Guangyu Tian.
 
-This repository preserves the study's physics, force-residual networks, learning scripts, planners, adapted neural-ExpTanh comparator and saved evaluation evidence. The source copies retain their original versioned filenames and hashes. New release utilities configure a local licensed parameter asset and verify the downloaded bytes.
+## 1. What this study does
 
-## Contents
+A vehicle planner tests several future steering and wheel-torque commands before choosing its next action. The model used to predict those commands affects which action the planner chooses.
 
-- `trfc_drift/`, `trfc_wm/` and `tools/`: original implementation and its statically resolved local Python imports.
-- `checkpoints/`: 22 trained checkpoints, including the forecast baselines, selected residual, independent replicas and fitted ExpTanh variants.
-- `experiments/results/`: saved development, confirmation and independent-checker JSON files. Courses, seeds and settings remain in the original receipts.
-- `specification/`: implementation supplement source, full-precision physical coefficients and training-configuration JSON.
-- `manifests/`: source/checkpoint hashes, data-asset hashes, original-to-release checkpoint mapping and licensed-asset identification.
-- `release_tools/`: byte verification, a CPU-only import/checkpoint smoke, and an offline script launcher.
+We study a compact chassis model that combines vehicle physics with a small learned correction to each wheel's tire forces. We compare two ways of training the correction: matching recorded vehicle motion, and matching how a higher-fidelity chassis twin evaluates candidate commands. Autonomous drifting provides the control task. The main result is that a model can improve driving precision even when its trajectory predictions become less accurate.
 
-## Numerical data assets
+## 2. Download the data
 
-Download the numerical data from the [v1.0.0 dataset release](https://github.com/das1iw/decision-focused-chassis-world-models/releases/tag/v1.0.0). See [DATASET_CARD.md](DATASET_CARD.md) for provenance, fields, splits and limitations. [CITATION.cff](CITATION.cff) identifies this repository as the dataset associated with the paper.
+The [version 1 dataset release](https://github.com/das1iw/decision-focused-chassis-world-models/releases/tag/v1.0.0) contains three files:
 
-| Asset | Bytes | Installation |
-|---|---:|---|
-| [sequence_data_v1.npz](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/sequence_data_v1.npz) | 76,933,168 | `data/sequence_data_v1.npz` |
-| [decision_data_v1.npz](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/decision_data_v1.npz) | 574,493,236 | `data/decision_data_v1.npz` |
-| [external_baseline_step_logs_v1.zip](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/external_baseline_step_logs_v1.zip) | 13,986,280 | Extract into `data/external_baseline_step_logs_v1/` |
+| No. | File | Contents |
+|---:|---|---|
+| 1 | [Recorded trajectories](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/sequence_data_v1.npz) | 256 simulated driving episodes: motion, commands, friction and model memory. |
+| 2 | [Planning decisions](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/decision_data_v1.npz) | 5,120 situations, each with 64 candidate command sequences and the twin's values. |
+| 3 | [CarSim validation logs](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/external_baseline_step_logs_v1.zip) | 192 drives comparing physics, an adapted learned-tire model and two decision-trained models. |
 
-Sequence data preserve recorded signals, commands, memory and course labels. Decision data preserve common candidate commands, twin values, windows, state/history and split identifiers. The external-baseline archive contains 216 saved numerical/metadata files. No new trajectories were collected for this release.
+Save the first two files in `data/`. Extract the third into `data/carsim/`. See [DATA.md](DATA.md) for array fields, units and train/test splits. Original course and random-seed IDs are retained in the data.
 
-Verify files before use:
+## 3. Code and models
 
-```text
-python release_tools/verify_release.py --assets ../release_assets --out outputs/byte_verification.json
-```
+| Folder | Contents |
+|---|---|
+| `cwm/` | Planar physics, tire-force residuals, the planning objective and rollout kernels. |
+| `scripts/` | Training, prediction/decision evaluation, and CarSim-log analysis. All implementation versions start at `v1`. |
+| `models/` | Trained checkpoints, numbered from 1; descriptions are in `metadata/models.json`. |
+| `config/` | Physical coefficients and training settings. |
+| `results/` | Numerical results for the comparisons reported in the paper. |
 
-## Software and licensed dependencies
+This repository provides the reduced planning model and the training and evaluation code for the released data.
 
-Use Python 3.10 or later. `requirements-core.txt` names the core packages; `manifests/current_host_smoke.json` records the packaging host's exact versions after the CPU smoke. This is a current-host environment record, not an assertion that the historical training environment was recovered. GPU planning additionally needs a compatible CUDA/CuPy setup; the source retains the original kernels. A clean second-machine and GPU reproduction remains to be completed.
+## 4. Getting started
 
-The planar physics model loads tire, aligning-moment and motor tables from a licensed CarSim vehicle parameter asset. CarSim binaries and vehicle parameter files are not distributed here. `manifests/licensed_dependencies.json` identifies the expected expanded parameter asset by SHA-256. Offline model reproduction requires permitted access to that asset, even when the native solver is not run. Native closed-loop replication additionally requires CarSim 2024.1 and adaptation of the original host/solver paths.
-
-Install core packages in an isolated environment and run the CPU smoke with the path to your own licensed asset:
+Use Python 3.10 or later:
 
 ```text
-python -m pip install -r requirements-core.txt
-python release_tools/smoke.py --asset-par PATH_TO_LICENSED_BASE_RUN_PAR --out outputs/smoke.json
+python -m pip install -r requirements.txt
+python scripts/inspect_data_v1.py data/sequence_data_v1.npz
 ```
 
-The smoke initializes the physical model and strictly loads checkpoint state dictionaries. It does not execute a forecast, scientific score, training loop or simulator.
-
-## Offline reproduction entry points
-
-The following commands are provided for reproducing used-development analyses in a new output directory. They were not run as part of packaging. The preserved evaluation scripts import CuPy for checkpoint/kernel helpers even when executing on CPU, so install a compatible CuPy build before using them. The basic import/checkpoint smoke above does not require CuPy. The offline launcher must configure the parameter asset before the original modules capture its path.
+Reading the data requires no simulator. Running the physical model requires the licensed vehicle parameter file identified in `metadata/licensed_dependencies.json`. That file supplies the tire and motor tables and is not redistributed. With your own permitted copy:
 
 ```text
-python release_tools/offline.py --asset-par PATH_TO_LICENSED_BASE_RUN_PAR tools/cwm289_resid_eval_v1.py --data data/sequence_data_v1.npz --mlp checkpoints/wm4_289/resid_dfl_v5/mlp_from_v3.pt --stride 20 --out outputs/forecast_reproduction.json
-python release_tools/offline.py --asset-par PATH_TO_LICENSED_BASE_RUN_PAR tools/cwm289_dfl_score_offline_v1.py --dfl data/decision_data_v1.npz --models physics=physics,selected=resid:checkpoints/wm4_289/resid_dfl_v5/mlp_from_v3.pt --device cpu --out outputs/decision_reproduction.json
+python scripts/smoke_v1.py --asset-par PATH_TO_VEHICLE_PARAMETER_FILE
+python scripts/run_v1.py --asset-par PATH_TO_VEHICLE_PARAMETER_FILE scripts/evaluate_forecasts_v1.py --help
 ```
 
-These evaluate used development data; they do not create fresh confirmation. Preserve original receipts and use separate output paths. Whole-course splits differ between forecast training (last four courses) and decision training (last three); inspect `specification/training_configs.json` before retraining. The per-decision normalization comparison has known batch/budget differences and is an empirical recipe.
+The training and evaluation scripts expose their arguments through `--help`. The evaluation code imports CuPy even for CPU evaluation; install a CuPy build matching your CUDA environment before using those scripts. `metadata/environment.json` records the environment used for the package check. Checkpoint loading and model equivalence passed on the recorded environment; a separate-machine/GPU reproduction remains to be completed.
 
-Fresh-course tests are already used. Inspect the preserved confirmation/checker receipts for published statistics. The external-baseline step logs accompany them for audit. Packaging did not rerun frozen scorers or launch native campaigns. Native sources retain historical machine-specific paths and are provided for inspection; portable native replay is not claimed.
+## 5. Scope of the evidence
 
-## Interpretation
+Training data come from a 44-state simulation twin; the external validation logs come from CarSim. There are no real-vehicle measurements or direct tire-force labels in these files. State initialization and the initial friction prior use simulation information. The learned correction is bounded per axis but is not projected onto a friction circle.
 
-The contribution is decision-focused force-residual training within explicit chassis dynamics and a fixed MPPI planner. The 30% result concerns an adapted neural-ExpTanh implementation under this vehicle, data and planner; it does not rank the original published controller in general. Forecast degradation, force-feasibility limits, simulation-provided initialization/prior information and lack of a strict sensing-to-actuation timing guarantee remain part of the result.
+The learned-tire comparison uses our adaptation of the published ExpTanh formulation under the same vehicle and planner. It does not compare the original published controller across its own operating conditions. Courses are the statistical groups; multiple conditions on one course are not independent replications.
 
-Code is released under MIT; datasets, numerical evidence and trained checkpoints under CC BY 4.0. See [LICENSE_STATUS.md](LICENSE_STATUS.md) for scope. Cite this dataset through the repository citation button or [CITATION.cff](CITATION.cff). The associated manuscript is named above; no paper DOI or journal acceptance is implied.
+## 6. Citation and licenses
+
+Use [CITATION.cff](CITATION.cff) or GitHub's **Cite this repository** button to cite the dataset. The associated paper is named at the top of this page.
+
+Code: [MIT](LICENSE). Data, numerical results and trained checkpoints: [CC BY 4.0](LICENSE-DATA). Native CarSim software and vehicle assets remain under their own terms.

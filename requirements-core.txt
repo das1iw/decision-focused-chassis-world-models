@@ -1,6 +1,0 @@
-numpy
-scipy
-torch
-numba
-psutil
-matplotlib

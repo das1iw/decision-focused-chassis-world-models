@@ -1,4 +1,0 @@
-# Original GPU planners and preserved offline evaluation imports need CuPy.
-# Match its build to the installed CUDA runtime. The basic smoke does not require CuPy.
--r requirements-core.txt
-# Install an appropriate CuPy build separately.

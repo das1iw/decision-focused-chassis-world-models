@@ -6,6 +6,3 @@ data/*
 !data/README.md
 *.STOP
 *.partial.pt
-
-# Local handoff notes are not part of the public dataset.
-UPLOAD_NOTES.md

@@ -1,0 +1,13 @@
+{
+  "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "torch": "2.11.0+cu128",
+    "numba": "0.67.0",
+    "psutil": "7.2.2",
+    "matplotlib": "3.10.9",
+    "cupy-cuda12x": "14.2.0"
+  }
+}

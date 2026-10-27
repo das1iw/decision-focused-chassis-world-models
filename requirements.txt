@@ -1,0 +1,7 @@
+numpy
+scipy
+torch
+numba
+psutil
+matplotlib
+# Evaluation and GPU kernels also require a CuPy build matching your CUDA setup.
