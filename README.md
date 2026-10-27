@@ -63,4 +63,4 @@ Fresh-course tests are already used. Inspect the preserved confirmation/checker 
 
 The contribution is decision-focused force-residual training within explicit chassis dynamics and a fixed MPPI planner. The 30% result concerns an adapted neural-ExpTanh implementation under this vehicle, data and planner; it does not rank the original published controller in general. Forecast degradation, force-feasibility limits, simulation-provided initialization/prior information and lack of a strict sensing-to-actuation timing guarantee remain part of the result.
 
-Code is released under MIT; datasets, numerical evidence and trained checkpoints under CC BY 4.0. See [LICENSE_STATUS.md](LICENSE_STATUS.md) for scope. Cite this dataset through the repository citation button or [CITATION.cff](CITATION.cff). The associated manuscript is named above; no paper DOI or journal acceptance is implied.
+Code is released under MIT; datasets, numerical evidence and trained checkpoints under CC BY 4.0. See [LICENSE_STATUS.md](LICENSE_STATUS.md) for scope. Cite this dataset through the repository citation button.
