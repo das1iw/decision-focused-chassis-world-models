@@ -8,6 +8,12 @@ A vehicle planner tests several future steering and wheel-torque commands before
 
 We study a compact chassis model that combines vehicle physics with a small learned correction to each wheel's tire forces. We compare two ways of training the correction: matching recorded vehicle motion, and matching how a higher-fidelity chassis twin evaluates candidate commands. Autonomous drifting provides the control task. The main result is that a model can improve driving precision even when its trajectory predictions become less accurate.
 
+### Learning and planning architecture
+
+![Learning and planning architecture](figures/figure_1.png)
+
+The residual is trained offline using the twin's candidate evaluations. Online, the fixed model is used inside MPPI to choose the next command. [Download the diagram as PDF](figures/figure_1.pdf).
+
 ## 2. Download the data
 
 The [version 1 dataset release](https://github.com/das1iw/decision-focused-chassis-world-models/releases/tag/v1.0.0) contains three files:
@@ -20,6 +26,12 @@ The [version 1 dataset release](https://github.com/das1iw/decision-focused-chass
 
 Save the first two files in `data/`. Extract the third into `data/carsim/`. See [DATA.md](DATA.md) for array fields, units and train/test splits. Original course and random-seed IDs are retained in the data.
 
+### A recorded CarSim drive
+
+![Recorded CarSim drive and motion histories](figures/figure_2.png)
+
+Vehicle paths and lateral-error/sideslip histories for one recorded drive. The example was chosen because complete CarSim outputs were retained for both models. [Download the figure as PDF](figures/figure_2.pdf).
+
 ## 3. Code and models
 
 | Folder | Contents |
@@ -29,6 +41,7 @@ Save the first two files in `data/`. Extract the third into `data/carsim/`. See 
 | `models/` | Trained checkpoints, numbered from 1; descriptions are in `metadata/models.json`. |
 | `config/` | Physical coefficients and training settings. |
 | `results/` | Numerical results for the comparisons reported in the paper. |
+| `figures/` | The architecture diagram and final CarSim figure from the paper, as PNG and PDF. |
 
 This repository provides the reduced planning model and the training and evaluation code for the released data.
 
@@ -60,4 +73,4 @@ The learned-tire comparison uses our adaptation of the published ExpTanh formula
 
 Use [CITATION.cff](CITATION.cff) or GitHub's **Cite this repository** button to cite the dataset. The associated paper is named at the top of this page.
 
-Code: [MIT](LICENSE). Data, numerical results and trained checkpoints: [CC BY 4.0](LICENSE-DATA). Native CarSim software and vehicle assets remain under their own terms.
+Code: [MIT](LICENSE). Data, numerical results, trained checkpoints and figures: [CC BY 4.0](LICENSE-DATA). Native CarSim software and vehicle assets remain under their own terms.

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Learning and planning architecture",
+    "pdf": "figures/figure_1.pdf",
+    "preview": "figures/figure_1.png",
+    "pdf_sha256": "7412c5d54f058c0f8f772eb6cd4a1f3105ccbf442c6f2db36fd58458c7dd34f0",
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": 2,
+    "title": "Recorded CarSim drive",
+    "pdf": "figures/figure_2.pdf",
+    "preview": "figures/figure_2.png",
+    "pdf_sha256": "e52fba5d0395165a44192a92c30244ca08b4549feb2d176ef204f874e05d3690",
+    "license": "CC-BY-4.0"
+  }
+]
