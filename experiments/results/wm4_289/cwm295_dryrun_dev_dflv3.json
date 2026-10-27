@@ -1,0 +1,361 @@
+{
+ "args": {
+  "nom_v2b": "D:/TRFC_data/wm4_289/branch_v3/m75_nom/v2b_tb812_H4.json",
+  "nom_dfl": "D:/TRFC_data/wm4_289/branch_v3/m75_nom/v2rb_dflv3_tb812_H4.json",
+  "nom_twb": "D:/TRFC_data/wm4_289/branch_v1/m75_nom/twb_tb812_H4.json",
+  "nom_rfb": "D:/TRFC_data/wm4_289/branch_v3/m75_nom/rfb64_tb812_H4.json",
+  "drop_v2b": "D:/TRFC_data/wm4_289/branch_v1/m75/v2b.json",
+  "drop_dfl": "D:/TRFC_data/wm4_289/branch_v3/m75/v2rb_dflv3.json",
+  "drop_rfb": "D:/TRFC_data/wm4_289/branch_v3/m75/rfb64.json",
+  "timing": "",
+  "twin_ms": 0.0,
+  "out": "experiments/results/wm4_289/cwm295_dryrun_dev_dflv3.json"
+ },
+ "nominal_dfl_vs_v2b": {
+  "n_common": 64,
+  "ref_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 57.12695600002917,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 57.09861900009855,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 0,
+   "ref_only": 0,
+   "arm_total": 0,
+   "ref_total": 0
+  },
+  "zone_frac": {
+   "n_pairs": 64,
+   "ref_mean": 0.8894328469674364,
+   "arm_mean": 0.9140509425282233,
+   "course_mean_diff": 0.024618095560786743,
+   "n_courses": 16,
+   "courses_neg": 4,
+   "p": 0.00634765625
+  },
+  "max_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.8374052885919809,
+   "arm_mean": 0.7309969756752253,
+   "course_mean_diff": -0.10640831291675568,
+   "n_courses": 16,
+   "courses_neg": 15,
+   "p": 0.000213623046875
+  },
+  "rms_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.4885021631271806,
+   "arm_mean": 0.3895282722813579,
+   "course_mean_diff": -0.09897389084582275,
+   "n_courses": 16,
+   "courses_neg": 16,
+   "p": 3.0517578125e-05
+  },
+  "beta_err_zone": {
+   "n_pairs": 64,
+   "ref_mean": 2.2235055230461893,
+   "arm_mean": 1.9537013978883513,
+   "course_mean_diff": -0.26980412515783814,
+   "n_courses": 16,
+   "courses_neg": 13,
+   "p": 0.0062255859375
+  },
+  "progress": {
+   "n_pairs": 64,
+   "ref_mean": 80.21521329879761,
+   "arm_mean": 80.54876351356506,
+   "course_mean_diff": 0.33355021476745605,
+   "n_courses": 16,
+   "courses_neg": 5,
+   "p": 0.0579833984375
+  }
+ },
+ "H1": {
+  "pass_": true,
+  "p": 3.0517578125e-05,
+  "diff": -0.09897389084582275
+ },
+ "H2": {
+  "pass_": true,
+  "p": 0.000213623046875,
+  "diff": -0.10640831291675568
+ },
+ "H3": {
+  "pass_": true,
+  "p": 0.00634765625,
+  "diff": 0.024618095560786743
+ },
+ "drop_dfl_vs_v2b": {
+  "n_common": 256,
+  "ref_meta": {
+   "n": 256,
+   "crashed": 0.1171875,
+   "ms": 154.44354033352283,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 256,
+   "crashed": 0.09375,
+   "ms": 170.4600943332965,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 1,
+   "ref_only": 7,
+   "arm_total": 24,
+   "ref_total": 30
+  },
+  "zone_frac": {
+   "n_pairs": 225,
+   "ref_mean": 0.9073965456722842,
+   "arm_mean": 0.9096146454378251,
+   "course_mean_diff": 0.0028326284630485086,
+   "n_courses": 16,
+   "courses_neg": 4,
+   "p": 0.529876708984375
+  },
+  "max_lat": {
+   "n_pairs": 225,
+   "ref_mean": 1.7920848796102735,
+   "arm_mean": 1.819944934182697,
+   "course_mean_diff": 0.0194574670396904,
+   "n_courses": 16,
+   "courses_neg": 6,
+   "p": 0.4097900390625
+  },
+  "rms_lat": {
+   "n_pairs": 0,
+   "ref_mean": NaN,
+   "arm_mean": NaN,
+   "course_mean_diff": NaN,
+   "n_courses": 0,
+   "courses_neg": 0,
+   "p": NaN
+  },
+  "beta_err_zone": {
+   "n_pairs": 0,
+   "ref_mean": NaN,
+   "arm_mean": NaN,
+   "course_mean_diff": NaN,
+   "n_courses": 0,
+   "courses_neg": 0,
+   "p": NaN
+  },
+  "progress": {
+   "n_pairs": 225,
+   "ref_mean": 84.66046310424805,
+   "arm_mean": 84.96436772664389,
+   "course_mean_diff": 0.3175259954187817,
+   "n_courses": 16,
+   "courses_neg": 3,
+   "p": 0.018341064453125
+  }
+ },
+ "H4": {
+  "pass_": true,
+  "arm_only": 1,
+  "ref_only": 7,
+  "upper_b": 3.7654352688090524,
+  "extra_crash_bound": -3.2345647311909476
+ },
+ "H5": {
+  "pass_": true,
+  "planner_ms_dfl": 57.09861900009855,
+  "planner_ms_planar": 57.12695600002917,
+  "planner_ms_twin": 6174.723252000041,
+  "kernel_ms_dfl": null,
+  "kernel_ms_planar": null
+ },
+ "nominal_twb_vs_v2b": {
+  "n_common": 64,
+  "ref_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 57.12695600002917,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 6174.723252000041,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 0,
+   "ref_only": 0,
+   "arm_total": 0,
+   "ref_total": 0
+  },
+  "zone_frac": {
+   "n_pairs": 64,
+   "ref_mean": 0.8894328469674364,
+   "arm_mean": 0.9121099467364853,
+   "course_mean_diff": 0.022677099769048782,
+   "n_courses": 16,
+   "courses_neg": 3,
+   "p": 0.010986328125
+  },
+  "max_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.8374052885919809,
+   "arm_mean": 0.6182581298053265,
+   "course_mean_diff": -0.21914715878665447,
+   "n_courses": 16,
+   "courses_neg": 16,
+   "p": 3.0517578125e-05
+  },
+  "progress": {
+   "n_pairs": 64,
+   "ref_mean": 80.21521329879761,
+   "arm_mean": 79.43787860870361,
+   "course_mean_diff": -0.7773346900939941,
+   "n_courses": 16,
+   "courses_neg": 14,
+   "p": 0.001068115234375
+  }
+ },
+ "recovered_share": {
+  "zone_frac": 1.085592770305979,
+  "max_lat": 0.485556433886268
+ },
+ "nominal_rfb_vs_v2b": {
+  "n_common": 64,
+  "ref_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 57.12695600002917,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 1391.0634644999664,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 0,
+   "ref_only": 0,
+   "arm_total": 0,
+   "ref_total": 0
+  },
+  "zone_frac": {
+   "n_pairs": 64,
+   "ref_mean": 0.8894328469674364,
+   "arm_mean": 0.9084479807892842,
+   "course_mean_diff": 0.0190151338218477,
+   "n_courses": 16,
+   "courses_neg": 5,
+   "p": 0.029541015625
+  },
+  "max_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.8374052885919809,
+   "arm_mean": 0.6822628900408745,
+   "course_mean_diff": -0.15514239855110645,
+   "n_courses": 16,
+   "courses_neg": 16,
+   "p": 3.0517578125e-05
+  },
+  "rms_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.4885021631271806,
+   "arm_mean": 0.3598684402686714,
+   "course_mean_diff": -0.12863372285850927,
+   "n_courses": 16,
+   "courses_neg": 16,
+   "p": 3.0517578125e-05
+  },
+  "beta_err_zone": {
+   "n_pairs": 64,
+   "ref_mean": 2.2235055230461893,
+   "arm_mean": 2.027577314399406,
+   "course_mean_diff": -0.19592820864678345,
+   "n_courses": 16,
+   "courses_neg": 10,
+   "p": 0.04656982421875
+  },
+  "progress": {
+   "n_pairs": 64,
+   "ref_mean": 80.21521329879761,
+   "arm_mean": 79.8077757358551,
+   "course_mean_diff": -0.4074375629425049,
+   "n_courses": 16,
+   "courses_neg": 13,
+   "p": 0.03497314453125
+  }
+ },
+ "drop_rfb_vs_v2b": {
+  "n_common": 256,
+  "ref_meta": {
+   "n": 256,
+   "crashed": 0.1171875,
+   "ms": 154.44354033352283,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 256,
+   "crashed": 0.07421875,
+   "ms": 4836.775472333247,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 1,
+   "ref_only": 12,
+   "arm_total": 19,
+   "ref_total": 30
+  },
+  "zone_frac": {
+   "n_pairs": 225,
+   "ref_mean": 0.9073965456722842,
+   "arm_mean": 0.9046886196284389,
+   "course_mean_diff": -0.0016283490252306937,
+   "n_courses": 16,
+   "courses_neg": 7,
+   "p": 0.813629150390625
+  },
+  "max_lat": {
+   "n_pairs": 225,
+   "ref_mean": 1.7920848796102735,
+   "arm_mean": 1.7973159472147624,
+   "course_mean_diff": -0.0011702127746469788,
+   "n_courses": 16,
+   "courses_neg": 7,
+   "p": 0.958984375
+  },
+  "rms_lat": {
+   "n_pairs": 0,
+   "ref_mean": NaN,
+   "arm_mean": NaN,
+   "course_mean_diff": NaN,
+   "n_courses": 0,
+   "courses_neg": 0,
+   "p": NaN
+  },
+  "beta_err_zone": {
+   "n_pairs": 0,
+   "ref_mean": NaN,
+   "arm_mean": NaN,
+   "course_mean_diff": NaN,
+   "n_courses": 0,
+   "courses_neg": 0,
+   "p": NaN
+  },
+  "progress": {
+   "n_pairs": 225,
+   "ref_mean": 84.66046310424805,
+   "arm_mean": 84.12835223727757,
+   "course_mean_diff": -0.5036086085753324,
+   "n_courses": 16,
+   "courses_neg": 14,
+   "p": 0.000579833984375
+  }
+ },
+ "headline": true
+}

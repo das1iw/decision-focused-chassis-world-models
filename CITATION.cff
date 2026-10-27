@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+type: dataset
+message: "If you use these data or companion code, cite this dataset and the associated manuscript named in the README."
+title: "Dataset and companion code for Physics-Structured Chassis World Models with Decision-Focused Tire-Force Learning"
+authors:
+  - family-names: "Kaldybayev"
+    given-names: "Dastan"
+  - family-names: "Su"
+    given-names: "Yanzhao"
+  - family-names: "Huang"
+    given-names: "Jin"
+  - family-names: "Tian"
+    given-names: "Guangyu"
+version: "1.0.0"
+date-released: "2026-10-27"
+url: "https://github.com/das1iw/decision-focused-chassis-world-models"
+repository-code: "https://github.com/das1iw/decision-focused-chassis-world-models"
+license: CC-BY-4.0
+keywords:
+  - vehicle dynamics
+  - chassis world models
+  - decision-focused learning
+  - autonomous drifting
+  - simulation dataset
+abstract: "Simulation data and companion implementation for decision-focused learning of bounded wheel-force residuals in a physics-structured chassis world model. Includes recorded twin trajectories, reference-twin candidate-command evaluations, trained checkpoints and external-baseline CarSim step logs. Native simulator and licensed vehicle assets are not distributed."

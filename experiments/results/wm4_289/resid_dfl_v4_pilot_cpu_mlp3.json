@@ -1,0 +1,82 @@
+{
+ "args": {
+  "dfl": "D:/TRFC_data/wm4_289/dfl_v1/m75/twb_dfl_nom_dfl.npz",
+  "resid": "mlp",
+  "init": "D:/TRFC_data/wm4_289/resid_v3/mlp.pt",
+  "val_courses": 3,
+  "iters": 60,
+  "batch": 16,
+  "lr": 0.001,
+  "w_dif": 0.1,
+  "eval_every": 30,
+  "pre_full": 0,
+  "eval_max": 160,
+  "seed": 2899,
+  "device": "cpu",
+  "dtype": "float32",
+  "m_train": 16,
+  "resume": 0,
+  "group_size": 1,
+  "out": "D:/TRFC_data/wm4_289/resid_dfl_v4/pilot_cpu_mlp3.pt",
+  "report": "experiments/results/wm4_289/resid_dfl_v4_pilot_cpu_mlp3.json"
+ },
+ "n_train": 4160,
+ "n_val": 960,
+ "val_courses": [
+  9040,
+  9041,
+  9042
+ ],
+ "before": {
+  "physics_subset": {
+   "rank": 0.8253660141941392,
+   "regretW": 0.3007073485414665,
+   "du0": 0.08332316331824437,
+   "ce": 4.1052507444372095,
+   "n": 160
+  },
+  "init_subset": {
+   "rank": 0.8182646520146519,
+   "regretW": 0.3504160924794902,
+   "du0": 0.08279829215456028,
+   "ce": 4.144824961546222,
+   "n": 160
+  }
+ },
+ "evals": [
+  {
+   "rank": 0.8202091918498168,
+   "regretW": 0.3486256200724318,
+   "du0": 0.07944481623220796,
+   "ce": 4.136586721088519,
+   "n": 160,
+   "it": 30,
+   "subset": true
+  },
+  {
+   "rank": 0.8431413118131867,
+   "regretW": 0.2745209695323598,
+   "du0": 0.07264303411834011,
+   "ce": 3.9621400775568745,
+   "n": 960,
+   "it": 60,
+   "subset": false
+  }
+ ],
+ "hist": [
+  [
+   0,
+   2.385373830795288,
+   2.378519058227539,
+   0.06854881346225739
+  ],
+  [
+   50,
+   2.6541383266448975,
+   2.6429879665374756,
+   0.1115034744143486
+  ]
+ ],
+ "wall_s": 5014.839314699173,
+ "note": "final checkpoint = last iteration (no selection on held-out decisions)"
+}

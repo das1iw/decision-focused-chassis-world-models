@@ -1,0 +1,43 @@
+{
+ "n": 256,
+ "courses": [
+  9040,
+  9041,
+  9042
+ ],
+ "none_vs_zero": {
+  "G_identical": true,
+  "alive_identical": true,
+  "max_abs_dG": 0.0
+ },
+ "parity": {
+  "D1": {
+   "path": "D:/TRFC_data/wm4_289/resid_dfl_v5/mlp_from_v3.pt",
+   "max_rel_dG": 0.07919236746065896,
+   "median_rel_dG": 3.319666153431429e-05,
+   "alive_identical": true,
+   "alive_mismatch": 0,
+   "max_du0": 0.0062405985222074856,
+   "median_du0": 2.536981881622047e-06
+  },
+  "D2": {
+   "path": "D:/TRFC_data/wm4_299/dfl_rep_s290.pt",
+   "max_rel_dG": 0.04729147739704768,
+   "median_rel_dG": 3.0778138540381135e-05,
+   "alive_identical": true,
+   "alive_mismatch": 0,
+   "max_du0": 0.011427102405084044,
+   "median_du0": 2.7250695531395863e-06
+  },
+  "D3": {
+   "path": "D:/TRFC_data/wm4_299/dfl_rep_s291.pt",
+   "max_rel_dG": 0.041077626550835335,
+   "median_rel_dG": 2.7951782751036457e-05,
+   "alive_identical": true,
+   "alive_mismatch": 0,
+   "max_du0": 0.0028382676635496096,
+   "median_du0": 2.911792191473417e-06
+  }
+ },
+ "pass": true
+}

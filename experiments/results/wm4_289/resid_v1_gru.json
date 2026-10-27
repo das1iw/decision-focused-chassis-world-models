@@ -1,0 +1,1 @@
+{"placeholder": "GRU residual training: the CPU run started 00:35 was stopped at 00:41 (too slow on the shared E-cores; it reached H5 iteration ~100); it will be trained on the GPU with tools/cwm289_resid_train_v2.py --device cuda (identical settings) after the T-IV session resumes GPU use. This file is overwritten by that report. Not a result."}

@@ -1,0 +1,29 @@
+{
+ "n": 256,
+ "parity": {
+  "zero": {
+   "max_rel_dG": 0.02601299922408246,
+   "median_rel_dG": 3.536268028575094e-05,
+   "alive_identical": true,
+   "alive_mismatch": 0,
+   "max_du0": 0.002230023870626152,
+   "median_du0": 2.885099387131551e-06
+  },
+  "dflv3": {
+   "max_rel_dG": 0.028148936710306792,
+   "median_rel_dG": 2.7108393862390495e-05,
+   "alive_identical": true,
+   "alive_mismatch": 0,
+   "max_du0": 0.0062405985222074856,
+   "median_du0": 2.7546693852492643e-06
+  }
+ },
+ "latency_ms": {
+  "physics_284": 18.229750014143065,
+  "v2_block128": 187.46879999525845,
+  "v2_block32": 119.343000013032,
+  "warp_block128": 23.239550020662136,
+  "warp_block64": 23.24570000928361,
+  "warp_physics_only": 19.105850005871616
+ }
+}

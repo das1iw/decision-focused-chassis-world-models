@@ -1,0 +1,29 @@
+{
+ "n": 32,
+ "exptanh": "D:/TRFC_data/wm4_307/smoke_h3.pt",
+ "bitwise": {
+  "kind0": {
+   "G_identical": false,
+   "alive_identical": true,
+   "max_abs_dG": 0.0740966796875
+  },
+  "kind1_dflv3": {
+   "G_identical": false,
+   "alive_identical": true,
+   "max_abs_dG": 0.0181884765625
+  }
+ },
+ "kind3": {
+  "max_rel_dG": 0.012087119035040257,
+  "median_rel_dG": 0.0001882177842104028,
+  "alive_mismatch": 0,
+  "alive_total": 2048,
+  "max_du0": 0.0011250603377234714,
+  "median_du0": 2.357625769626448e-05
+ },
+ "latency_ms": {
+  "physics": 18.64384999498725,
+  "dflv3": 25.549900004989468,
+  "exptanh": 21.944349995465018
+ }
+}

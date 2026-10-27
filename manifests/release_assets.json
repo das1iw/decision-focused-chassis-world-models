@@ -1,0 +1,26 @@
+[
+  {
+    "asset": "sequence_data_v1.npz",
+    "sha256": "91d8715bf643da0c84fbd05b9ecb24cadd8f26bfa3fe37aa8e599f842ec16ffb",
+    "bytes": 76933168,
+    "install_as": "data/sequence_data_v1.npz",
+    "url": "https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/sequence_data_v1.npz",
+    "license": "CC-BY-4.0"
+  },
+  {
+    "asset": "decision_data_v1.npz",
+    "sha256": "04d5f7c63a569567a3441ea46b4a16e9763ff4563cd0ccf66c2b92439444a614",
+    "bytes": 574493236,
+    "install_as": "data/decision_data_v1.npz",
+    "url": "https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/decision_data_v1.npz",
+    "license": "CC-BY-4.0"
+  },
+  {
+    "asset": "external_baseline_step_logs_v1.zip",
+    "sha256": "05b263b25ea012fdfad89e2ef796d666cee636d4c907161d2888bb444b3e34d8",
+    "bytes": 13986280,
+    "unzip_into": "data/external_baseline_step_logs_v1",
+    "url": "https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/external_baseline_step_logs_v1.zip",
+    "license": "CC-BY-4.0"
+  }
+]

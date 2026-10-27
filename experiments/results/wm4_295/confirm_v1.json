@@ -1,0 +1,361 @@
+{
+ "args": {
+  "nom_v2b": "D:/TRFC_data/wm4_295/confirm_v1/nom_v2b.json",
+  "nom_dfl": "D:/TRFC_data/wm4_295/confirm_v1/nom_dfl.json",
+  "nom_twb": "D:/TRFC_data/wm4_295/confirm_v1/nom_twb.json",
+  "nom_rfb": "D:/TRFC_data/wm4_295/confirm_v1/nom_rfb64.json",
+  "drop_v2b": "D:/TRFC_data/wm4_295/confirm_v1/drop_v2b.json",
+  "drop_dfl": "D:/TRFC_data/wm4_295/confirm_v1/drop_dfl.json",
+  "drop_rfb": "D:/TRFC_data/wm4_295/confirm_v1/drop_rfb64.json",
+  "timing": "experiments/results/wm4_295/timing_v1.json",
+  "twin_ms": 0.0,
+  "out": "experiments/results/wm4_295/confirm_v1.json"
+ },
+ "nominal_dfl_vs_v2b": {
+  "n_common": 64,
+  "ref_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 55.632940999639686,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 56.697527499709395,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 0,
+   "ref_only": 0,
+   "arm_total": 0,
+   "ref_total": 0
+  },
+  "zone_frac": {
+   "n_pairs": 64,
+   "ref_mean": 0.9276096681275998,
+   "arm_mean": 0.9296430433905892,
+   "course_mean_diff": 0.0020333752629893963,
+   "n_courses": 16,
+   "courses_neg": 6,
+   "p": 0.5654296875
+  },
+  "max_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.8025935324840248,
+   "arm_mean": 0.7005623893346637,
+   "course_mean_diff": -0.10203114314936101,
+   "n_courses": 16,
+   "courses_neg": 15,
+   "p": 0.000152587890625
+  },
+  "rms_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.4883869633639812,
+   "arm_mean": 0.37536701374618897,
+   "course_mean_diff": -0.11301994961779212,
+   "n_courses": 16,
+   "courses_neg": 15,
+   "p": 6.103515625e-05
+  },
+  "beta_err_zone": {
+   "n_pairs": 64,
+   "ref_mean": 1.710192518160539,
+   "arm_mean": 1.740653139923731,
+   "course_mean_diff": 0.03046062176319199,
+   "n_courses": 16,
+   "courses_neg": 12,
+   "p": 0.959228515625
+  },
+  "progress": {
+   "n_pairs": 64,
+   "ref_mean": 82.53450977802277,
+   "arm_mean": 82.75947868824005,
+   "course_mean_diff": 0.22496891021728516,
+   "n_courses": 16,
+   "courses_neg": 5,
+   "p": 0.1217041015625
+  }
+ },
+ "H1": {
+  "pass_": true,
+  "p": 6.103515625e-05,
+  "diff": -0.11301994961779212
+ },
+ "H2": {
+  "pass_": true,
+  "p": 0.000152587890625,
+  "diff": -0.10203114314936101
+ },
+ "H3": {
+  "pass_": false,
+  "p": 0.5654296875,
+  "diff": 0.0020333752629893963
+ },
+ "drop_dfl_vs_v2b": {
+  "n_common": 256,
+  "ref_meta": {
+   "n": 256,
+   "crashed": 0.1328125,
+   "ms": 158.65914599984535,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 256,
+   "crashed": 0.1171875,
+   "ms": 160.91422566726882,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 2,
+   "ref_only": 6,
+   "arm_total": 30,
+   "ref_total": 34
+  },
+  "zone_frac": {
+   "n_pairs": 220,
+   "ref_mean": 0.8708913693989602,
+   "arm_mean": 0.8532213591137517,
+   "course_mean_diff": -0.018779535889236643,
+   "n_courses": 16,
+   "courses_neg": 11,
+   "p": 0.0452880859375
+  },
+  "max_lat": {
+   "n_pairs": 220,
+   "ref_mean": 1.6458522355691954,
+   "arm_mean": 1.6596343360841275,
+   "course_mean_diff": 0.013481926747514743,
+   "n_courses": 16,
+   "courses_neg": 9,
+   "p": 0.522003173828125
+  },
+  "rms_lat": {
+   "n_pairs": 220,
+   "ref_mean": 0.929114638824562,
+   "arm_mean": 0.9389961464171283,
+   "course_mean_diff": 0.009435036859531688,
+   "n_courses": 16,
+   "courses_neg": 8,
+   "p": 0.47723388671875
+  },
+  "beta_err_zone": {
+   "n_pairs": 220,
+   "ref_mean": 2.7729020941564575,
+   "arm_mean": 2.9254018996410194,
+   "course_mean_diff": 0.16655705673512883,
+   "n_courses": 16,
+   "courses_neg": 6,
+   "p": 0.117279052734375
+  },
+  "progress": {
+   "n_pairs": 220,
+   "ref_mean": 87.54220059134744,
+   "arm_mean": 87.95082856958562,
+   "course_mean_diff": 0.3958175479929089,
+   "n_courses": 16,
+   "courses_neg": 3,
+   "p": 0.001617431640625
+  }
+ },
+ "H4": {
+  "pass_": true,
+  "arm_only": 2,
+  "ref_only": 6,
+  "upper_b": 4.797515113526663,
+  "extra_crash_bound": -1.2024848864733366
+ },
+ "H5": {
+  "pass_": true,
+  "planner_ms_dfl": 56.697527499709395,
+  "planner_ms_planar": 55.632940999639686,
+  "planner_ms_twin": 3009.8297595002077,
+  "kernel_ms_dfl": 261.08319999912055,
+  "kernel_ms_planar": 56.251699999847915
+ },
+ "nominal_twb_vs_v2b": {
+  "n_common": 64,
+  "ref_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 55.632940999639686,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 3009.8297595002077,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 0,
+   "ref_only": 0,
+   "arm_total": 0,
+   "ref_total": 0
+  },
+  "zone_frac": {
+   "n_pairs": 64,
+   "ref_mean": 0.9276096681275998,
+   "arm_mean": 0.9321338933239229,
+   "course_mean_diff": 0.004524225196323209,
+   "n_courses": 16,
+   "courses_neg": 1,
+   "p": 0.3408203125
+  },
+  "max_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.8025935324840248,
+   "arm_mean": 0.6024062167853117,
+   "course_mean_diff": -0.20018731569871306,
+   "n_courses": 16,
+   "courses_neg": 16,
+   "p": 3.0517578125e-05
+  },
+  "progress": {
+   "n_pairs": 64,
+   "ref_mean": 82.53450977802277,
+   "arm_mean": 81.8300131559372,
+   "course_mean_diff": -0.7044966220855713,
+   "n_courses": 16,
+   "courses_neg": 14,
+   "p": 0.000457763671875
+  }
+ },
+ "recovered_share": {
+  "zone_frac": 0.4494416556987259,
+  "max_lat": 0.509678361954363
+ },
+ "nominal_rfb_vs_v2b": {
+  "n_common": 64,
+  "ref_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 55.632940999639686,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 64,
+   "crashed": 0.0,
+   "ms": 957.9956159991707,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 0,
+   "ref_only": 0,
+   "arm_total": 0,
+   "ref_total": 0
+  },
+  "zone_frac": {
+   "n_pairs": 64,
+   "ref_mean": 0.9276096681275998,
+   "arm_mean": 0.9261871989622006,
+   "course_mean_diff": -0.0014224691653992646,
+   "n_courses": 16,
+   "courses_neg": 4,
+   "p": 0.751953125
+  },
+  "max_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.8025935324840248,
+   "arm_mean": 0.6605050107464194,
+   "course_mean_diff": -0.14208852173760533,
+   "n_courses": 16,
+   "courses_neg": 16,
+   "p": 3.0517578125e-05
+  },
+  "rms_lat": {
+   "n_pairs": 64,
+   "ref_mean": 0.4883869633639812,
+   "arm_mean": 0.3564663558762197,
+   "course_mean_diff": -0.13192060748776144,
+   "n_courses": 16,
+   "courses_neg": 16,
+   "p": 3.0517578125e-05
+  },
+  "beta_err_zone": {
+   "n_pairs": 64,
+   "ref_mean": 1.710192518160539,
+   "arm_mean": 1.7434686518053217,
+   "course_mean_diff": 0.03327613364478261,
+   "n_courses": 16,
+   "courses_neg": 6,
+   "p": 0.807281494140625
+  },
+  "progress": {
+   "n_pairs": 64,
+   "ref_mean": 82.53450977802277,
+   "arm_mean": 82.35395777225494,
+   "course_mean_diff": -0.18055200576782227,
+   "n_courses": 16,
+   "courses_neg": 12,
+   "p": 0.455535888671875
+  }
+ },
+ "drop_rfb_vs_v2b": {
+  "n_common": 256,
+  "ref_meta": {
+   "n": 256,
+   "crashed": 0.1328125,
+   "ms": 158.65914599984535,
+   "stopped": false
+  },
+  "arm_meta": {
+   "n": 256,
+   "crashed": 0.09375,
+   "ms": 2034.3630579998232,
+   "stopped": false
+  },
+  "crash": {
+   "arm_only": 1,
+   "ref_only": 11,
+   "arm_total": 24,
+   "ref_total": 34
+  },
+  "zone_frac": {
+   "n_pairs": 221,
+   "ref_mean": 0.8714755713473812,
+   "arm_mean": 0.8669617281659033,
+   "course_mean_diff": -0.004696453420103351,
+   "n_courses": 16,
+   "courses_neg": 8,
+   "p": 0.493896484375
+  },
+  "max_lat": {
+   "n_pairs": 221,
+   "ref_mean": 1.6411695273348648,
+   "arm_mean": 1.637795730009338,
+   "course_mean_diff": -0.000416538613633468,
+   "n_courses": 16,
+   "courses_neg": 8,
+   "p": 0.986114501953125
+  },
+  "rms_lat": {
+   "n_pairs": 221,
+   "ref_mean": 0.9265731424943298,
+   "arm_mean": 0.9207877656232241,
+   "course_mean_diff": -0.004519072043578295,
+   "n_courses": 16,
+   "courses_neg": 9,
+   "p": 0.727264404296875
+  },
+  "beta_err_zone": {
+   "n_pairs": 221,
+   "ref_mean": 2.7669712811524008,
+   "arm_mean": 2.7597668751813145,
+   "course_mean_diff": -0.00443216563812826,
+   "n_courses": 16,
+   "courses_neg": 9,
+   "p": 0.9466552734375
+  },
+  "progress": {
+   "n_pairs": 221,
+   "ref_mean": 87.69596232763783,
+   "arm_mean": 87.31182621399202,
+   "course_mean_diff": -0.39201324462017295,
+   "n_courses": 16,
+   "courses_neg": 12,
+   "p": 0.01947021484375
+  }
+ },
+ "headline": true
+}

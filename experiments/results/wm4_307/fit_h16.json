@@ -1,0 +1,164 @@
+{
+ "args": {
+  "data": "D:/TRFC_data/wm4_289/seqdata_v1/data.npz",
+  "train_courses": "9027-9039",
+  "val_courses": "9040-9042",
+  "hidden": 16,
+  "epochs": 150,
+  "batch": 4096,
+  "lr": 0.001,
+  "gamma": 0.99,
+  "lam": 0.01,
+  "seed": 307,
+  "device": "cuda",
+  "out": "D:/TRFC_data/wm4_307/exptanh_h16.pt",
+  "report": "experiments/results/wm4_307/fit_h16.json"
+ },
+ "n_train": 383406,
+ "n_val": 90540,
+ "history": [
+  {
+   "epoch": 0,
+   "train": 29.94659532630268,
+   "val": 6.688292396108968,
+   "val_penalty_active": 0.7036199469847582
+  },
+  {
+   "epoch": 10,
+   "train": 0.649600147324042,
+   "val": 0.6664892516685432,
+   "val_penalty_active": 0.4992296222664016
+  },
+  {
+   "epoch": 20,
+   "train": 0.49872403631177775,
+   "val": 0.5560636883175306,
+   "val_penalty_active": 0.21683233929754805
+  },
+  {
+   "epoch": 30,
+   "train": 0.4031929680700614,
+   "val": 0.39891194069884706,
+   "val_penalty_active": 0.32536447978793903
+  },
+  {
+   "epoch": 40,
+   "train": 0.3568314330409375,
+   "val": 0.370307255382523,
+   "val_penalty_active": 0.11421471172962226
+  },
+  {
+   "epoch": 50,
+   "train": 0.3446399326635625,
+   "val": 0.3543664409302929,
+   "val_penalty_active": 0.013988292467417717
+  },
+  {
+   "epoch": 60,
+   "train": 0.3275782832712242,
+   "val": 0.3374826892399535,
+   "val_penalty_active": 0.01165506958250497
+  },
+  {
+   "epoch": 70,
+   "train": 0.31931067867272994,
+   "val": 0.3234701371600452,
+   "val_penalty_active": 0.006781533024077756
+  },
+  {
+   "epoch": 80,
+   "train": 0.3126793106104934,
+   "val": 0.3263966500641438,
+   "val_penalty_active": 0.007532582284073338
+  },
+  {
+   "epoch": 90,
+   "train": 0.30555238188325706,
+   "val": 0.31193157951323075,
+   "val_penalty_active": 0.006729070024298653
+  },
+  {
+   "epoch": 100,
+   "train": 0.30158574319655107,
+   "val": 0.31158078060590194,
+   "val_penalty_active": 0.00798265959796775
+  },
+  {
+   "epoch": 110,
+   "train": 0.29901406196928343,
+   "val": 0.302616135202036,
+   "val_penalty_active": 0.0064612326043737576
+  },
+  {
+   "epoch": 120,
+   "train": 0.29465132134122873,
+   "val": 0.30259259893527407,
+   "val_penalty_active": 0.00896841175171195
+  },
+  {
+   "epoch": 130,
+   "train": 0.2926406529178299,
+   "val": 0.3000760777485644,
+   "val_penalty_active": 0.008554230174508504
+  },
+  {
+   "epoch": 140,
+   "train": 0.29058549047597826,
+   "val": 0.29696869025320727,
+   "val_penalty_active": 0.009103711066931744
+  },
+  {
+   "epoch": 149,
+   "train": 0.28916374108271226,
+   "val": 0.3001703886367189,
+   "val_penalty_active": 0.009609012591119947
+  }
+ ],
+ "inversion_residual_rms_N": [
+  201.5999602845801,
+  16.66979578404203,
+  13.373996527005255
+ ],
+ "val_forces": {
+  "exptanh": {
+   "rmse_fx_front": 157.26900844708388,
+   "rmse_fx_rear": 155.46202393447538,
+   "rmse_body_long": 264.50254436357193,
+   "rmse_body_lat": 259.86973489878926,
+   "rmse_body_yaw_over_lever": 254.6979267842552,
+   "rmse_fy_vs_loadsplit_front": 290.98533009781266,
+   "rmse_fy_vs_loadsplit_rear": 223.51317853179427
+  },
+  "physics": {
+   "rmse_fx_front": 140.05244572040368,
+   "rmse_fx_rear": 134.3247473214515,
+   "rmse_body_long": 190.390691500995,
+   "rmse_body_lat": 194.59391488445726,
+   "rmse_body_yaw_over_lever": 191.8123078829113,
+   "rmse_fy_vs_loadsplit_front": 289.20034333299293,
+   "rmse_fy_vs_loadsplit_rear": 209.85107195182158
+  }
+ },
+ "train_forces": {
+  "exptanh": {
+   "rmse_fx_front": 156.62709475954298,
+   "rmse_fx_rear": 155.43445487586905,
+   "rmse_body_long": 260.9156596910171,
+   "rmse_body_lat": 256.320046168221,
+   "rmse_body_yaw_over_lever": 251.62606894812026,
+   "rmse_fy_vs_loadsplit_front": 284.12055840309426,
+   "rmse_fy_vs_loadsplit_rear": 229.59866772734196
+  },
+  "physics": {
+   "rmse_fx_front": 140.04621804736152,
+   "rmse_fx_rear": 134.56602360671536,
+   "rmse_body_long": 188.7939901948054,
+   "rmse_body_lat": 192.93227561329226,
+   "rmse_body_yaw_over_lever": 190.37534772515582,
+   "rmse_fy_vs_loadsplit_front": 281.5269696666579,
+   "rmse_fy_vs_loadsplit_rear": 215.920834942735
+  }
+ },
+ "n_params": 1582,
+ "wall_s": 351.00659430000815
+}

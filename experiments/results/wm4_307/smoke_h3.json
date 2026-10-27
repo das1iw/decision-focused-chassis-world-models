@@ -1,0 +1,80 @@
+{
+ "args": {
+  "data": "D:/TRFC_data/wm4_289/seqdata_v1/data.npz",
+  "train_courses": "9027-9039",
+  "val_courses": "9040-9042",
+  "hidden": 3,
+  "epochs": 3,
+  "batch": 4096,
+  "lr": 0.001,
+  "gamma": 0.99,
+  "lam": 0.01,
+  "seed": 307,
+  "device": "cuda",
+  "out": "D:/TRFC_data/wm4_307/smoke_h3.pt",
+  "report": "experiments/results/wm4_307/smoke_h3.json"
+ },
+ "n_train": 383406,
+ "n_val": 90540,
+ "history": [
+  {
+   "epoch": 0,
+   "train": 53.559949749756726,
+   "val": 37.9632210977859,
+   "val_penalty_active": 0.8129914954716148
+  },
+  {
+   "epoch": 2,
+   "train": 11.207903109196563,
+   "val": 8.94783194771175,
+   "val_penalty_active": 0.6943698917605479
+  }
+ ],
+ "inversion_residual_rms_N": [
+  201.5999602845801,
+  16.66979578404203,
+  13.373996527005255
+ ],
+ "val_forces": {
+  "exptanh": {
+   "rmse_fx_front": 592.7063430793676,
+   "rmse_fx_rear": 666.9738894777746,
+   "rmse_body_long": 1481.7392551255648,
+   "rmse_body_lat": 2082.6258527241835,
+   "rmse_body_yaw_over_lever": 893.4708060420904,
+   "rmse_fy_vs_loadsplit_front": 835.3291238169626,
+   "rmse_fy_vs_loadsplit_rear": 733.0219306521794
+  },
+  "physics": {
+   "rmse_fx_front": 140.05244572040368,
+   "rmse_fx_rear": 134.3247473214515,
+   "rmse_body_long": 190.390691500995,
+   "rmse_body_lat": 194.59391488445726,
+   "rmse_body_yaw_over_lever": 191.8123078829113,
+   "rmse_fy_vs_loadsplit_front": 289.20034333299293,
+   "rmse_fy_vs_loadsplit_rear": 209.85107195182158
+  }
+ },
+ "train_forces": {
+  "exptanh": {
+   "rmse_fx_front": 598.7998494609507,
+   "rmse_fx_rear": 680.5179522880203,
+   "rmse_body_long": 1468.5408127091798,
+   "rmse_body_lat": 2118.304780102096,
+   "rmse_body_yaw_over_lever": 889.808362392811,
+   "rmse_fy_vs_loadsplit_front": 875.3195822603606,
+   "rmse_fy_vs_loadsplit_rear": 760.1947556348861
+  },
+  "physics": {
+   "rmse_fx_front": 140.04621804736152,
+   "rmse_fx_rear": 134.56602360671536,
+   "rmse_body_long": 188.7939901948054,
+   "rmse_body_lat": 192.93227561329226,
+   "rmse_body_yaw_over_lever": 190.37534772515582,
+   "rmse_fy_vs_loadsplit_front": 281.5269696666579,
+   "rmse_fy_vs_loadsplit_rear": 215.920834942735
+  }
+ },
+ "n_params": 152,
+ "wall_s": 7.615327499981504
+}

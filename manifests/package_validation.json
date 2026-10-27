@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "syntax_checked_python_files": 119,
+  "byte_verified_files": 321,
+  "checkpoints_loaded_cpu": 22,
+  "static_local_source_closure_files": 116,
+  "common_embedded_credential_patterns": 0,
+  "public_upload": false,
+  "git_remote_created": false,
+  "training_or_native_simulation": false,
+  "scientific_scores_recomputed": false,
+  "second_machine_reproduction": "pending",
+  "license_selection": {
+    "code": "MIT",
+    "data_and_checkpoints": "CC-BY-4.0"
+  },
+  "numerical_assets_directory": "../release_assets",
+  "publication_target": "https://github.com/das1iw/decision-focused-chassis-world-models"
+}

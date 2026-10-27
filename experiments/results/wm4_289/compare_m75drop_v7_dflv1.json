@@ -1,0 +1,141 @@
+{
+ "arms": {
+  "v2b": {
+   "path": "D:/TRFC_data/wm4_289/branch_v1/m75/v2b.json",
+   "n": 256,
+   "crashed": 0.1171875,
+   "ctl_ms_per_step": 154.44354033352283,
+   "stopped_early": false,
+   "steps": 300
+  },
+  "dflv1": {
+   "path": "D:/TRFC_data/wm4_289/branch_v3/m75/v2rb_dflv1.json",
+   "n": 256,
+   "crashed": 0.10546875,
+   "ctl_ms_per_step": 158.1493106663887,
+   "stopped_early": false,
+   "steps": 300
+  },
+  "rfb64": {
+   "path": "D:/TRFC_data/wm4_289/branch_v3/m75/rfb64.json",
+   "n": 256,
+   "crashed": 0.07421875,
+   "ctl_ms_per_step": 4836.775472333247,
+   "stopped_early": false,
+   "steps": 300
+  }
+ },
+ "n_common": 256,
+ "per_arm": {
+  "v2b": {
+   "crash_share": 0.1171875,
+   "n_crashed": 30,
+   "zone_frac": 0.9071349497271368,
+   "max_lat": 1.8021979324058093,
+   "progress": 84.75331458370242,
+   "mean_vx": 13.916952412757903
+  },
+  "dflv1": {
+   "crash_share": 0.10546875,
+   "n_crashed": 27,
+   "zone_frac": 0.9085329294430353,
+   "max_lat": 1.858952955127283,
+   "rms_lat": 1.0412433513845163,
+   "beta_err_zone": 2.536650418250606,
+   "progress": 85.36615558274448,
+   "mean_vx": 14.022446228236264
+  },
+  "rfb64": {
+   "crash_share": 0.07421875,
+   "n_crashed": 19,
+   "zone_frac": 0.8970710103407313,
+   "max_lat": 1.9053245802971883,
+   "rms_lat": 1.0739066741662089,
+   "beta_err_zone": 2.752764652338506,
+   "progress": 84.53951586952692,
+   "mean_vx": 13.902233802521113
+  }
+ },
+ "paired": {
+  "dflv1-v2b": {
+   "survival": {
+    "arm_only": 5,
+    "ref_only": 2,
+    "course_mean_diff": 0.01171875,
+    "p_signflip": 0.25
+   },
+   "zone_frac": {
+    "n_pairs": 224,
+    "mean_diff": 0.0013760354277763324,
+    "course_mean_diff": 0.0034402456496645407,
+    "courses_positive": 10,
+    "n_courses": 16,
+    "p_signflip": 0.4962158203125
+   },
+   "max_lat": {
+    "n_pairs": 224,
+    "mean_diff": 0.028100730585200445,
+    "course_mean_diff": 0.018051864531869955,
+    "courses_positive": 10,
+    "n_courses": 16,
+    "p_signflip": 0.3717041015625
+   },
+   "progress": {
+    "n_pairs": 224,
+    "mean_diff": 0.34390548297337126,
+    "course_mean_diff": 0.38661269760314443,
+    "courses_positive": 14,
+    "n_courses": 16,
+    "p_signflip": 0.00567626953125
+   },
+   "mean_vx": {
+    "n_pairs": 224,
+    "mean_diff": 0.05630767863421206,
+    "course_mean_diff": 0.0630777995774983,
+    "courses_positive": 14,
+    "n_courses": 16,
+    "p_signflip": 0.00250244140625
+   }
+  },
+  "rfb64-v2b": {
+   "survival": {
+    "arm_only": 12,
+    "ref_only": 1,
+    "course_mean_diff": 0.04296875,
+    "p_signflip": 0.03125
+   },
+   "zone_frac": {
+    "n_pairs": 225,
+    "mean_diff": -0.0027079260438452866,
+    "course_mean_diff": -0.0016283490252306937,
+    "courses_positive": 9,
+    "n_courses": 16,
+    "p_signflip": 0.813629150390625
+   },
+   "max_lat": {
+    "n_pairs": 225,
+    "mean_diff": 0.0052310676044887965,
+    "course_mean_diff": -0.0011702127746469788,
+    "courses_positive": 9,
+    "n_courses": 16,
+    "p_signflip": 0.958984375
+   },
+   "progress": {
+    "n_pairs": 225,
+    "mean_diff": -0.5321108669704862,
+    "course_mean_diff": -0.5036086085753324,
+    "courses_positive": 2,
+    "n_courses": 16,
+    "p_signflip": 0.000579833984375
+   },
+   "mean_vx": {
+    "n_pairs": 225,
+    "mean_diff": -0.07975046514581752,
+    "course_mean_diff": -0.07543016698758587,
+    "courses_positive": 1,
+    "n_courses": 16,
+    "p_signflip": 0.000335693359375
+   }
+  }
+ }
+}

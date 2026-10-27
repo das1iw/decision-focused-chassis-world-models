@@ -1,0 +1,58 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Dataset for Physics-Structured Chassis World Models with Decision-Focused Tire-Force Learning",
+  "description": "Recorded twin trajectories, twin-valued command banks, CarSim external-baseline step logs and companion code for the named manuscript.",
+  "url": "https://github.com/das1iw/decision-focused-chassis-world-models",
+  "version": "1.0.0",
+  "datePublished": "2026-10-27",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": [
+    {
+      "@type": "Person",
+      "givenName": "Dastan",
+      "familyName": "Kaldybayev"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Yanzhao",
+      "familyName": "Su"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Jin",
+      "familyName": "Huang"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Guangyu",
+      "familyName": "Tian"
+    }
+  ],
+  "citation": "Dastan Kaldybayev, Yanzhao Su, Jin Huang, Guangyu Tian. Physics-Structured Chassis World Models with Decision-Focused Tire-Force Learning. Manuscript, 2026.",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "sequence_data_v1.npz",
+      "contentUrl": "https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/sequence_data_v1.npz",
+      "contentSize": "76933168 bytes",
+      "sha256": "91d8715bf643da0c84fbd05b9ecb24cadd8f26bfa3fe37aa8e599f842ec16ffb"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "decision_data_v1.npz",
+      "contentUrl": "https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/decision_data_v1.npz",
+      "contentSize": "574493236 bytes",
+      "sha256": "04d5f7c63a569567a3441ea46b4a16e9763ff4563cd0ccf66c2b92439444a614"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "external_baseline_step_logs_v1.zip",
+      "contentUrl": "https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/external_baseline_step_logs_v1.zip",
+      "contentSize": "13986280 bytes",
+      "sha256": "05b263b25ea012fdfad89e2ef796d666cee636d4c907161d2888bb444b3e34d8"
+    }
+  ],
+  "measurementTechnique": "44-state chassis-twin simulation and native CarSim validation",
+  "isAccessibleForFree": true
+}

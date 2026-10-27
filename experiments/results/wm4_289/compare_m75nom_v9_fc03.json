@@ -1,0 +1,101 @@
+{
+ "arms": {
+  "v2b": {
+   "path": "D:/TRFC_data/wm4_289/branch_v3/m75_nom/v2b_tb812_H4.json",
+   "n": 64,
+   "crashed": 0.0,
+   "ctl_ms_per_step": 57.12695600002917,
+   "stopped_early": false,
+   "steps": 200
+  },
+  "fc03": {
+   "path": "D:/TRFC_data/wm4_289/branch_v3/m75_nom/v2rb_dfl7fc03_tb812_H4.json",
+   "n": 64,
+   "crashed": 0.0,
+   "ctl_ms_per_step": 56.02559099992504,
+   "stopped_early": false,
+   "steps": 200
+  }
+ },
+ "n_common": 64,
+ "per_arm": {
+  "v2b": {
+   "crash_share": 0.0,
+   "n_crashed": 0,
+   "zone_frac": 0.8894328469674364,
+   "max_lat": 0.8374052885919809,
+   "rms_lat": 0.4885021631271806,
+   "beta_err_zone": 2.2235055230461893,
+   "progress": 80.21521329879761,
+   "mean_vx": 19.552964268550276
+  },
+  "fc03": {
+   "crash_share": 0.0,
+   "n_crashed": 0,
+   "zone_frac": 0.9120203945672243,
+   "max_lat": 0.8441042527556419,
+   "rms_lat": 0.4743950206607636,
+   "beta_err_zone": 1.9743755581710685,
+   "progress": 80.16977429389954,
+   "mean_vx": 19.54085176423192
+  }
+ },
+ "paired": {
+  "fc03-v2b": {
+   "survival": {
+    "arm_only": 0,
+    "ref_only": 0,
+    "course_mean_diff": 0.0,
+    "p_signflip": 1.0
+   },
+   "zone_frac": {
+    "n_pairs": 64,
+    "mean_diff": 0.02258754759978778,
+    "course_mean_diff": 0.02258754759978778,
+    "courses_positive": 10,
+    "n_courses": 16,
+    "p_signflip": 0.0128173828125
+   },
+   "max_lat": {
+    "n_pairs": 64,
+    "mean_diff": 0.006698964163661003,
+    "course_mean_diff": 0.006698964163661003,
+    "courses_positive": 9,
+    "n_courses": 16,
+    "p_signflip": 0.650146484375
+   },
+   "rms_lat": {
+    "n_pairs": 64,
+    "mean_diff": -0.014107142466416969,
+    "course_mean_diff": -0.014107142466416967,
+    "courses_positive": 4,
+    "n_courses": 16,
+    "p_signflip": 0.037628173828125
+   },
+   "beta_err_zone": {
+    "n_pairs": 64,
+    "mean_diff": -0.2491299648751209,
+    "course_mean_diff": -0.24912996487512087,
+    "courses_positive": 2,
+    "n_courses": 16,
+    "p_signflip": 0.001617431640625
+   },
+   "progress": {
+    "n_pairs": 64,
+    "mean_diff": -0.04543900489807129,
+    "course_mean_diff": -0.04543900489807129,
+    "courses_positive": 8,
+    "n_courses": 16,
+    "p_signflip": 0.6907958984375
+   },
+   "mean_vx": {
+    "n_pairs": 64,
+    "mean_diff": -0.012112504318356282,
+    "course_mean_diff": -0.012112504318356282,
+    "courses_positive": 8,
+    "n_courses": 16,
+    "p_signflip": 0.6768798828125
+   }
+  }
+ }
+}
