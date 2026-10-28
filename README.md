@@ -22,7 +22,7 @@ The [version 1 dataset release](https://github.com/das1iw/decision-focused-chass
 |---:|---|---|
 | 1 | [Recorded trajectories](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/sequence_data_v1.npz) | 256 simulated driving episodes: motion, commands, friction and model memory. |
 | 2 | [Planning decisions](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/decision_data_v1.npz) | 5,120 situations, each with 64 candidate command sequences and the twin's values. |
-| 3 | [CarSim validation logs](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/external_baseline_step_logs_v1.zip) | 192 drives comparing physics, an adapted learned-tire model and two decision-trained models. |
+| 3 | [CarSim learned-tire comparison logs](https://github.com/das1iw/decision-focused-chassis-world-models/releases/download/v1.0.0/external_baseline_step_logs_v1.zip) | 192 drives comparing physics, an adapted learned-tire model and two decision-trained models. |
 
 Save the first two files in `data/`. Extract the third into `data/carsim/`. See [DATA.md](DATA.md) for array fields, units and train/test splits. Original course and random-seed IDs are retained in the data.
 
@@ -37,13 +37,24 @@ Vehicle paths and lateral-error/sideslip histories for one recorded drive. The e
 | Folder | Contents |
 |---|---|
 | `cwm/` | Planar physics, tire-force residuals, the planning objective and rollout kernels. |
-| `scripts/` | Training, prediction/decision evaluation, and CarSim-log analysis. All implementation versions start at `v1`. |
+| `scripts/` | Training, prediction/decision evaluation, and CarSim-log analysis. Training and evaluation entry points are listed in the scripts folder. |
 | `models/` | Trained checkpoints, numbered from 1; descriptions are in `metadata/models.json`. |
 | `config/` | Physical coefficients and training settings. |
 | `results/` | Numerical results for the comparisons reported in the paper. |
 | `figures/` | The architecture diagram and final CarSim figure from the paper, as PNG and PDF. |
 
 This repository provides the reduced planning model and the training and evaluation code for the released data.
+
+The main checkpoints used in the paper are:
+
+| Paper model | Checkpoint | Use |
+|---|---|---|
+| Selected decision-focused CWM | `models/model_2.pt` | Selected on development courses; used in the headline twin and CarSim confirmations. |
+| Independently retrained CWM 1 | `models/model_15.pt` | Used without closed-loop selection in the retraining and adapted-baseline comparisons. |
+| Independently retrained CWM 2 | `models/model_16.pt` | Used without closed-loop selection in the same comparisons. |
+| Adapted ExpTanh | `models/model_17.pt` | The 16-unit learned-tire variant selected on development driving. |
+
+The physical baseline uses no learned checkpoint. [Model metadata](metadata/models.json) describe all 22 checkpoints.
 
 ## 4. Getting started
 
@@ -65,7 +76,11 @@ The training and evaluation scripts expose their arguments through `--help`. The
 
 ## 5. Scope of the evidence
 
-Training data come from a 44-state simulation twin; the external validation logs come from CarSim. There are no real-vehicle measurements or direct tire-force labels in these files. State initialization and the initial friction prior use simulation information. The learned correction is bounded per axis but is not projected onto a friction circle.
+Training data come from a 44-state chassis twin implemented separately from CarSim, using the CarSim vehicle's parameters and related physical laws. The frozen residuals receive no CarSim training targets. CarSim validation therefore tests transfer between implementations of the same vehicle; it does not test another vehicle or establish physical accuracy against measurements. There are no real-vehicle measurements or direct tire-force labels in these files. State initialization and the initial friction prior use simulation information. The learned correction is bounded per axis but is not projected onto a friction circle.
+
+The demonstrated benefit is better lateral tracking with a compact model under the fixed MPPI planner. In the retraining comparison, residuals with 512 candidates outperform physics with 2048 candidates at similar rollout cost. This does not establish greater physical accuracy than the twin or CarSim. Drift-zone tracking does not significantly improve, grip-loss results are mixed, and strict real-time operation has not been established.
+
+The released CarSim step logs cover the adapted learned-tire comparison only. Earlier confirmations are represented by numerical result summaries, not complete step logs.
 
 The learned-tire comparison uses our adaptation of the published ExpTanh formulation under the same vehicle and planner. It does not compare the original published controller across its own operating conditions. Courses are the statistical groups; multiple conditions on one course are not independent replications.
 

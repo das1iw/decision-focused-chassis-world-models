@@ -4,153 +4,179 @@
     "file": "models/model_1.pt",
     "sha256": "bb5dea79d9317e4982d44baa08cb6c5b43786d423c93c63d76ea7e0386233287",
     "bytes": 46597,
-    "description": "Decision-trained force residual"
+    "description": "Decision-focused MLP initialized from the wheel-speed-trained residual",
+    "paper_role": "Decision-focused, wheel start"
   },
   {
     "id": 2,
     "file": "models/model_2.pt",
     "sha256": "f1cbb84f3bffded949d5b8f13c3cc9411713c10a52a2b6e3cb66c6e1d0a22745",
     "bytes": 46597,
-    "description": "Decision-trained force residual"
+    "description": "Selected decision-focused MLP initialized from the pose-trained residual",
+    "paper_role": "Selected CWM; decision-focused, pose start",
+    "selection": "Lowest development nominal RMS lateral error among models with no more observed grip-loss crashes than physics."
   },
   {
     "id": 3,
     "file": "models/model_3.pt",
     "sha256": "2b4e69004e967826c3e30be55d846acd62c3265584d510d877cfa8dd8337d137",
     "bytes": 46693,
-    "description": "Decision-trained force residual"
+    "description": "Decision-focused MLP initialized near zero",
+    "paper_role": "Decision-focused, zero start"
   },
   {
     "id": 4,
     "file": "models/model_4.pt",
     "sha256": "95051ca1cc34a2acd2e55462207539a845c1269c9c4f51e07d0613d9a8d7ec76",
     "bytes": 46765,
-    "description": "Decision-trained force residual"
+    "description": "Combined decision and forecast training",
+    "paper_role": "Combined-loss development variant"
   },
   {
     "id": 5,
     "file": "models/model_5.pt",
     "sha256": "8c55d172080cdeb5c44b338602e0a6b043669d244f4d7448dcf1a74316a3cdac",
     "bytes": 46813,
-    "description": "Decision-trained force residual"
+    "description": "Combined decision and forecast training with regularization",
+    "paper_role": "Regularized combined-loss development variant"
   },
   {
     "id": 6,
     "file": "models/model_6.pt",
     "sha256": "be6c95d2070b9e8baf1839838c637b1e9eb2c4037b999f0fa1a9706d8bef8f99",
     "bytes": 46053,
-    "description": "Wheel-focused forecast residual"
+    "description": "Wheel-speed-trained MLP, first training seed",
+    "paper_role": "MLP, wheel-speed loss (seed 1)"
   },
   {
     "id": 7,
     "file": "models/model_7.pt",
     "sha256": "62ca31a2adce0ecfbbfa3dd99b360a6c9c3bdd0c7d119eabbf3173b76de0ce3b",
     "bytes": 46497,
-    "description": "Wheel-focused forecast residual"
+    "description": "Wheel-speed-trained MLP, additional training seed",
+    "paper_role": "Forecast-model development comparison"
   },
   {
     "id": 8,
     "file": "models/model_8.pt",
     "sha256": "ea647dd7a285a30f13b495cb98a1fc2ba98a71d4d8c0441bb246cd7338cb2ce4",
     "bytes": 46497,
-    "description": "Wheel-focused forecast residual"
+    "description": "Wheel-speed-trained MLP, additional training seed",
+    "paper_role": "Forecast-model development comparison"
   },
   {
     "id": 9,
     "file": "models/model_9.pt",
     "sha256": "eccbdff691f59c370f5265538afa78dc531b885087bad033bc7270ee7fca41e5",
     "bytes": 661973,
-    "description": "Full-state neural baseline"
+    "description": "Generic full-state GRU",
+    "paper_role": "Generic neural baseline"
   },
   {
     "id": 10,
     "file": "models/model_10.pt",
     "sha256": "7444a7d7437f7adb7b71a21412f2a9f2bea4d194b55426535ae5314024ff10c5",
     "bytes": 662021,
-    "description": "Full-state neural baseline"
+    "description": "Generic full-state GRU with four times the training budget",
+    "paper_role": "Generic GRU (4x budget)"
   },
   {
     "id": 11,
     "file": "models/model_11.pt",
     "sha256": "a8c9796079717667d625a59dcc50c58f7c1f81f06207c4d829db702533531b3b",
     "bytes": 67989,
-    "description": "Pose/sideslip forecast residual"
+    "description": "Pose/sideslip-trained recurrent force residual",
+    "paper_role": "GRU, pose loss"
   },
   {
     "id": 12,
     "file": "models/model_12.pt",
     "sha256": "8c0b35d4ddc90896b1220aac6d3412d6ef3fbae7ee2459d6aca44a363e055579",
     "bytes": 46117,
-    "description": "Pose/sideslip forecast residual"
+    "description": "Pose/sideslip-trained MLP, first training seed",
+    "paper_role": "MLP, pose loss (seed 1)"
   },
   {
     "id": 13,
     "file": "models/model_13.pt",
     "sha256": "be3c532e7ac033a5bc67c49f071eb2c266337780336f471b3d5b03985c99b35a",
     "bytes": 46561,
-    "description": "Pose/sideslip forecast residual"
+    "description": "Pose/sideslip-trained MLP, additional training seed",
+    "paper_role": "Forecast-model development comparison"
   },
   {
     "id": 14,
     "file": "models/model_14.pt",
     "sha256": "76cd5072f16f5704e9a6ffebc3a03485c95d212cbc1affdbfd6f9525a0503b8e",
     "bytes": 46561,
-    "description": "Pose/sideslip forecast residual"
+    "description": "Pose/sideslip-trained MLP, additional training seed",
+    "paper_role": "Forecast-model development comparison"
   },
   {
     "id": 15,
     "file": "models/model_15.pt",
     "sha256": "37d7645f147f8dfa4176c238700764c033a3b32da672dc1bb3e15588ee016e94",
     "bytes": 46609,
-    "description": "Independently trained decision residual"
+    "description": "Independently retrained decision-focused MLP, replicate 1",
+    "paper_role": "Independent replicate 1",
+    "closed_loop_selection": false
   },
   {
     "id": 16,
     "file": "models/model_16.pt",
     "sha256": "158474679f9a13395da08b66456b014670dd047684d12bf659fab28779a03cb0",
     "bytes": 46609,
-    "description": "Independently trained decision residual"
+    "description": "Independently retrained decision-focused MLP, replicate 2",
+    "paper_role": "Independent replicate 2",
+    "closed_loop_selection": false
   },
   {
     "id": 17,
     "file": "models/model_17.pt",
     "sha256": "3f9789da34f69f34f05f14b828a2be063a41a30bd6aa618b79f5150fe601a251",
     "bytes": 21715,
-    "description": "ExpTanh tire model"
+    "description": "Selected adapted ExpTanh model with 16 hidden units",
+    "paper_role": "Adapted ExpTanh",
+    "selection": "Lowest development nominal RMS lateral error among models with no more observed grip-loss crashes than physics."
   },
   {
     "id": 18,
     "file": "models/model_18.pt",
     "sha256": "e619e251bc6c436857d6e536314904de49a602a91d428100287cdf6199444797",
     "bytes": 22309,
-    "description": "ExpTanh tire model"
+    "description": "Adapted ExpTanh with 16 hidden units, separate friction/load inputs and physics initialization",
+    "paper_role": "Learned-tire development variant"
   },
   {
     "id": 19,
     "file": "models/model_19.pt",
     "sha256": "e4564e0570783ba61b39aea0da7e882ddc9d6a996bd2471cacb0ef1e04d7fd93",
     "bytes": 21869,
-    "description": "ExpTanh tire model"
+    "description": "Adapted ExpTanh with 16 hidden units and physics initialization",
+    "paper_role": "Learned-tire development variant"
   },
   {
     "id": 20,
     "file": "models/model_20.pt",
     "sha256": "66f8743a4037efd76fda4b0aa9414cfbef80238c16c299643521ac83fcd87730",
     "bytes": 9653,
-    "description": "ExpTanh tire model"
+    "description": "Adapted ExpTanh with 3 hidden units",
+    "paper_role": "Learned-tire development variant"
   },
   {
     "id": 21,
     "file": "models/model_21.pt",
     "sha256": "1716ea5ffe32356ceb98ab268717cae424d1d1110e3d6118667295a30b69b963",
     "bytes": 51493,
-    "description": "ExpTanh tire model"
+    "description": "Adapted ExpTanh with 32 hidden units, separate friction/load inputs and physics initialization",
+    "paper_role": "Learned-tire development variant"
   },
   {
     "id": 22,
     "file": "models/model_22.pt",
     "sha256": "6b30236e1b3215bd7cf2db1d17d1668384946104858ff000c3ddd39f4bd779e4",
     "bytes": 9807,
-    "description": "ExpTanh tire model"
+    "description": "Adapted ExpTanh with 3 hidden units and physics initialization",
+    "paper_role": "Learned-tire development variant"
   }
 ]

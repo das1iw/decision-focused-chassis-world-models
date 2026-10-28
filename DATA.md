@@ -37,10 +37,12 @@ Each candidate spans 1.5 s. The bank keeps the twin's 32 best candidates and 32 
 
 `external_baseline_step_logs_v1.zip` contains 48 drives for each of four arms: physics, adapted ExpTanh, and two independently trained decision-focused residuals. The primary comparison uses 16 courses at friction 0.75/0.95; eight of those courses also run at 0.35/0.55.
 
+Extract the archive into `data/carsim/`. These are the logs of the adapted learned-tire comparison; the earlier CarSim confirmations are not included as step logs.
+
 Step-log columns are time, course progress, actual sideslip, reference sideslip, lateral error and the planner's friction estimate. JSON/JSONL files contain drive conditions and summaries. The archive retains original arm/course filenames so the numerical records remain traceable.
 
 ## 4. Units and use
 
 Mechanical quantities use SI units. Wheel order is front left, front right, rear left, rear right. Sequence steering commands are radians and wheel torques are N m. Candidate commands in `A` are normalized to [-1, 1].
 
-Split by complete courses when evaluating generalization. These data have already been used in the study; reusing them does not create a new prospective test. File sizes and SHA-256 hashes are listed in `metadata/data.json` and `SHA256SUMS.txt`.
+Split by complete courses when evaluating generalization. These data have already been used in the study; reusing them does not create a new prospective test. File sizes and SHA-256 hashes are listed in `metadata/data.json` and `SHA256SUMS.txt`. To check the downloads, keep all three archives and `SHA256SUMS.txt` in one directory and run `sha256sum -c SHA256SUMS.txt` there before extracting the CarSim archive.

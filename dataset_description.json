@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "Dataset for Physics-Structured Chassis World Models with Decision-Focused Tire-Force Learning",
-  "description": "Recorded twin trajectories, twin-valued command banks, CarSim external-baseline step logs and companion code for the named manuscript.",
+  "description": "Recorded trajectories and candidate planning values from a 44-state chassis twin, CarSim logs of the adapted learned-tire comparison, and companion code and checkpoints for the named manuscript. The twin and CarSim share vehicle parameters; these are simulation data for one vehicle.",
   "url": "https://github.com/das1iw/decision-focused-chassis-world-models",
   "version": "1.0.0",
   "datePublished": "2026-10-27",
